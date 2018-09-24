@@ -1,0 +1,830 @@
+08/28/18 10:26:05: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:26:05: Not connected to the SQL dabase server	
+08/28/18 10:26:08: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:26:08: Not connected to the SQL dabase server	
+08/28/18 10:27:02: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:27:02: Not connected to the SQL dabase server	
+08/28/18 10:28:28: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:28:28: Not connected to the SQL dabase server	
+08/28/18 10:28:39: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:28:39: Not connected to the SQL dabase server	
+08/28/18 10:30:03: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:30:03: Not connected to the SQL dabase server	
+08/28/18 10:30:05: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:30:05: Not connected to the SQL dabase server	
+08/28/18 10:31:34: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:31:34: Not connected to the SQL dabase server	
+08/28/18 10:31:39: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:31:39: Not connected to the SQL dabase server	
+08/28/18 10:33:18: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:33:26: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:37:24: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:37:54: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:37:56: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:39:10: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:39:36: Invalid connection type in SR_AddConnection() :         0	
+08/28/18 10:39:36: Not connected to the SQL dabase server	
+08/28/18 10:41:27: Connection Error: 1 (see pgs.ch)	
+08/28/18 10:41:27: Not connected to the SQL dabase server	
+08/28/18 10:41:46: Connection Error: 1 (see pgs.ch)	
+08/28/18 10:41:46: Not connected to the SQL dabase server	
+08/28/18 10:41:52: Connection Error: 1 (see pgs.ch)	
+08/28/18 10:42:18: Connection Error: 1 (see pgs.ch)	
+08/28/18 10:42:18: Not connected to the SQL dabase server	
+08/28/18 10:42:22: Connection Error: 1 (see pgs.ch)	
+08/28/18 10:42:22: Not connected to the SQL dabase server	
+08/28/18 10:55:10: Connection Error: 1 (see pgs.ch)	
+08/28/18 10:55:40: Connection Error: 1 (see pgs.ch)	
+08/28/18 10:55:40: Not connected to the SQL dabase server	
+08/28/18 11:00:51: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:00:51: Not connected to the SQL dabase server	
+08/28/18 11:10:59: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:10:59: Not connected to the SQL dabase server	
+08/28/18 11:11:17: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:11:17: Not connected to the SQL dabase server	
+08/28/18 11:11:19: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:11:19: Not connected to the SQL dabase server	
+08/28/18 11:12:10: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:12:25: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:12:33: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:12:33: Not connected to the SQL dabase server	
+08/28/18 11:14:16: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:14:16: Invalid connection string :	
+08/28/18 11:14:43: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:14:43: Invalid connection string :	
+08/28/18 11:15:01: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:15:01: Invalid connection string :	
+08/28/18 11:16:04: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:16:04: Invalid connection string :	
+08/28/18 11:16:38: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:16:38: Invalid connection string :	
+08/28/18 11:17:19: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:17:19: Invalid connection string :	
+08/28/18 11:19:46: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:19:46: Invalid connection string :	
+08/28/18 11:20:25: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:20:25: Invalid connection string :	
+08/28/18 11:20:33: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:20:33: Invalid connection string :	
+08/28/18 11:20:33: Not connected to the SQL dabase server	
+08/28/18 11:23:35: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:23:35: Invalid connection string :	
+08/28/18 11:25:06: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:25:06: Invalid connection string :	
+08/28/18 11:25:52: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:25:52: Invalid connection string :	
+08/28/18 11:26:07: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:26:45: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:28:48: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:30:04: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:30:18: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:30:28: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:31:12: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:31:20: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:31:46: Connection Error: 1 (see pgs.ch)	
+08/28/18 11:39:32: Unsupported Postgres version: PostgreSQL 9.4.19, compiled by Visual C++ build 1800, 32-bit	
+08/28/18 11:41:57: Unsupported Postgres version: PostgreSQL 9.4.19, compiled by Visual C++ build 1800, 32-bit	
+08/28/18 11:45:42: Unsupported Postgres version: PostgreSQL 9.4.19, compiled by Visual C++ build 1800, 32-bit	
+08/28/18 11:50:06: Unsupported Postgres version: PostgreSQL 9.4.19, compiled by Visual C++ build 1800, 32-bit	
+08/29/18 08:27:32: Unsupported Postgres version: PostgreSQL 9.4.19, compiled by Visual C++ build 1800, 32-bit	
+08/29/18 08:40:57: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:42:08: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:44:16: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:48:07: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:49:26: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:49:44: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:51:16: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:51:47: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:53:01: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:54:21: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:55:31: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:56:12: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:56:12: Not connected to the SQL dabase server	
+08/29/18 08:56:57: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:57:40: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 08:57:40: Invalid connection type in SR_AddConnection() :        -1	
+08/29/18 08:59:00: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 09:04:16: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 09:12:34: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 09:13:52: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 09:14:32: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 09:20:46: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 09:23:49: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 09:24:48: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:25:39: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:25:59: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:26:04: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:26:14: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:30:52: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:31:21: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:34:04: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:35:35: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:36:38: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:56:35: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:57:05: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:58:32: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:58:54: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:59:20: Connection Error: 1 (see pgs.ch)	
+08/29/18 09:59:54: Connection Error: 1 (see pgs.ch)	
+08/29/18 10:01:23: Connection Error: 1 (see pgs.ch)	
+08/29/18 10:02:44: Invalid connection type in SR_AddConnection() :         0	
+08/29/18 10:03:49: Invalid connection type in SR_AddConnection() :         0	
+Strange data type returned: 1015
+Strange data type returned: 1015
+Strange data type returned: 1015
+08/29/18 10:31:01: Error Opening table in SQL database	
+08/29/18 10:31:28: Table or View does not exist: BANCO	
+Strange data type returned: 1015
+08/29/18 10:53:16: Table or View does not exist: STRUC	
+Strange data type returned: 1015
+Strange data type returned: 1015
+Strange data type returned: 1015
+Strange data type returned: 1015
+08/30/18 09:04:17: Connection Error: 1 (see pgs.ch)	
+08/30/18 09:04:17: Not connected to the SQL dabase server	
+08/30/18 09:04:45: Connection Error: 1 (see pgs.ch)	
+08/30/18 09:04:45: Not connected to the SQL dabase server	
+08/30/18 09:04:48: Connection Error: 1 (see pgs.ch)	
+08/30/18 10:12:01: Attempt to write to an empty table without a previous Append Blank	
+08/30/18 10:12:05: Attempt to write to an empty table without a previous Append Blank	
+08/30/18 10:29:23: Table or View does not exist	
+08/30/18 10:38:24: Table or View does not exist	
+08/30/18 10:44:27: Update not allowed in table : select c_codigo, c_cliente from a_client	
+08/30/18 10:45:11: Insert not allowed in table : select c_codigo, c_cliente from a_client	
+08/30/18 10:50:09: Insert not allowed in table : select c_codigo, c_cliente from a_client	
+08/30/18 10:50:36: Insert not allowed in table : select c_codigo, c_cliente from a_client	
+Strange data type returned in query: 1015
+Strange data type returned in query: 1015
+08/30/18 10:58:09: Insert not allowed in table : select c_codigo, c_cliente from a_client	
+Strange data type returned in query: 1015
+Strange data type returned in query: 1015
+08/30/18 11:06:55: Insert not allowed in table : select c_cod from cliente	
+Strange data type returned in query: 1015
+Strange data type returned in query: 1015
+08/30/18 11:30:17: Insert not allowed in table : select c_codigo, c_cliente from a_client	
+08/30/18 11:32:10: Insert not allowed in table : select c_codigo, c_cliente from a_client	
+08/30/18 11:33:09: Insert not allowed in table : select c_codigo, c_cliente from a_client	
+08/30/18 11:33:23: Insert not allowed in table : select c_codigo, c_cliente from a_client	
+Strange data type returned in query: 1015
+Strange data type returned in query: 1015
+Strange data type returned in query: 1015
+08/30/18 11:42:02: Insert not allowed in table : select c_cod from cliente	
+08/30/18 11:52:33: Insert not allowed in table : select c_cod from cliente	
+08/31/18 08:05:21: Insert not allowed in table : select c_cod from cliente	
+08/31/18 08:13:15: Insert not allowed in table : select c_cod from cliente	
+08/31/18 08:18:57: Insert not allowed in table : select c_cod from cliente	
+08/31/18 08:21:17: Insert not allowed in table : select c_cod from cliente	
+Strange data type returned in query: 1015
+08/31/18 09:02:41: Table or View does not exist	
+Strange data type returned in query: 1015
+08/31/18 09:04:21: Table or View does not exist	
+08/31/18 09:05:06: Table or View does not exist	
+08/31/18 09:05:45: Table or View does not exist	
+Strange data type returned in query: 1015
+08/31/18 10:24:00: Insert not allowed in table : select c_fil, c_codigo, c_cliente from a_client	
+08/31/18 10:24:01: Insert not allowed in table : select c_fil, c_codigo, c_cliente from a_client	
+08/31/18 10:27:08: Insert not allowed in table : select c_fil, c_codigo, c_cliente from a_client	
+08/31/18 10:27:08: Insert not allowed in table : select c_fil, c_codigo, c_cliente from a_client	
+08/31/18 10:38:39: Table or View does not exist	
+08/31/18 10:38:58: Table or View does not exist	
+Strange data type returned in query: 1015
+Strange data type returned in query: 1015
+Strange data type returned in query: 1015
+08/31/18 10:42:29: Table or View does not exist	
+08/31/18 10:43:01: Table or View does not exist	
+08/31/18 10:43:08: Table or View does not exist	
+08/31/18 10:44:15: Table or View does not exist	
+08/31/18 11:13:33: Insert not allowed in table : select c_codigo from a_client	
+08/31/18 11:13:37: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 08:48:26: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 08:48:35: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 08:48:37: Update not allowed in table : select c_codigo from a_client	
+09/03/18 08:58:28: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 08:58:31: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:01:28: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:01:29: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:16:12: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:16:14: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:16:33: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:16:33: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:21:14: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:21:31: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:22:09: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:22:58: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:32:17: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:39:41: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  tabela "a_alunos" não existe
+
+Command sent to database : 
+DROP TABLE "a_alunos" /* drop table */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_DROPTABLE     Linha : 1607
+MAIN     Linha : 38	
+09/03/18 09:40:26: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:41:51: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:42:36: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:47:33: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:56:45: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:57:14: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:57:37: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:58:52: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 09:59:36: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 10:01:04: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 10:01:44: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 10:02:03: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 10:25:44: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 10:26:21: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 11:06:45: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 11:13:30: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 11:20:37: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 11:57:59: Insert not allowed in table : select c_codigo from a_client	
+09/03/18 11:59:19: Insert not allowed in table : select c_cod from a_anew	
+09/03/18 12:00:37: Insert not allowed in table : select c_cod from a_anew	
+09/03/18 12:00:44: Insert not allowed in table : select c_cod from a_anew	
+09/03/18 12:00:45: Insert not allowed in table : select c_cod from a_anew	
+09/04/18 08:24:32: Insert not allowed in table : select c_cod from a_anew	
+09/04/18 08:28:08: Insert not allowed in table : select c_cod, c_nome from a_anew	
+09/04/18 08:29:53: Insert not allowed in table : select c_cod, c_nome from a_anew	
+09/04/18 08:31:17: Insert not allowed in table : select c_cod, c_nome from a_anew	
+09/04/18 08:33:52: Insert not allowed in table : select c_cod, c_nome from a_anew	
+09/04/18 08:36:48: Insert not allowed in table : select c_cod, c_nome from a_anew	
+09/04/18 08:38:46: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 08:40:32: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 08:43:39: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 08:45:26: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 08:46:24: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 08:47:19: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 08:47:39: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 08:47:46: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 08:52:45: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:00:08: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:02:00: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:02:46: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:02:52: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:03:22: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:03:39: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:13:19: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:13:19: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:13:53: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:13:53: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:15:13: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:21:35: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:23:11: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+09/04/18 09:24:46: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+04/09/2018 09:27:21: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+04/09/2018 09:29:16: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+04/09/2018 09:34:23: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+04/09/2018 09:44:32: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+04/09/2018 09:53:44: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "a_new" não existe
+
+Command sent to database : 
+insert into a_new ( c_cod, c_nome, c_data ) values ('0001', 'ruann', '20180904')
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+MAIN     Linha : 53	
+04/09/2018 09:54:49: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+04/09/2018 09:56:29: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+04/09/2018 09:56:45: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+04/09/2018 09:57:46: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+04/09/2018 10:01:25: Insert not allowed in table : select c_cod, c_nome, c_data from a_anew	
+04/09/2018 10:07:22: Insert not allowed in table : select c_cod, c_nome, c_data from a_new	
+04/09/2018 10:08:45: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:10:09: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:16:09: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:17:07: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:18:14: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:18:15: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:25:45: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_cod","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 41	
+04/09/2018 10:27:30: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_nome","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 41	
+04/09/2018 10:33:27: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_nome","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 41	
+04/09/2018 10:33:47: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:33:48: Seek without active index	
+04/09/2018 10:34:26: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:34:26: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_nome","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 59	
+04/09/2018 10:38:16: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:38:28: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:38:30: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_nome","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+DEL     Linha : 105
+MAIN     Linha : 61	
+04/09/2018 10:43:48: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:43:58: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+04/09/2018 10:44:00: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_nome","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+DEL     Linha : 106
+MAIN     Linha : 62	
+04/09/2018 10:46:29: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_nome","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+04/09/2018 10:48:20: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_nome","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+04/09/2018 10:49:15: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_nome","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+04/09/2018 10:54:11: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_cod","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+04/09/2018 10:58:17: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_cod","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+04/09/2018 11:26:15: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_cod","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+04/09/2018 11:37:19: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_cod","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+05/09/2018 08:36:54: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX A_NAMES_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_cod","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+05/09/2018 09:16:48: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX ARQNTX_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_cod","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+05/09/2018 09:17:15: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:17:25: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:17:31: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:25:00: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX ARQNTX_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_cod","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+05/09/2018 09:25:29: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:25:53: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:26:27: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:26:27: Update not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:26:54: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:28:45: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:29:25: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:29:44: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:32:08: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:33:00: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:33:15: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:34:07: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX ARQNTX_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_cod","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+05/09/2018 09:35:01: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX ARQNTX_000001 ON "select c_cod, c_nome, c_data from a_names" ("c_cod","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 47	
+05/09/2018 09:41:05: Update not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:41:45: Update not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:42:15: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:42:15: Update not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:42:45: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:43:58: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX AQRNTX_000001 ON "select c_cod, c_nome, c_data from a_names" ("a_names","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 36	
+05/09/2018 09:48:23: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX AQRNTX_000001 ON "select c_cod, c_nome, c_data from a_names" ("a_names","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 37	
+05/09/2018 09:49:31: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "select c_cod, c_nome, c_data from a_names" não existe
+
+Command sent to database : 
+CREATE INDEX AQRNTX_000001 ON "select c_cod, c_nome, c_data from a_names" ("a_names","sr_recno") /* Create regular Index */
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+SR_WORKAREA:SQLORDERCREATE     Linha : 6676
+ORDCREATE     Linha : 0
+DBCREATEINDEX     Linha : 61
+MAIN     Linha : 37	
+05/09/2018 09:56:07: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:56:07: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:56:55: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:56:55: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:57:44: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 09:57:52: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 10:25:16: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 10:32:23: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 10:32:23: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 10:36:26: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+05/09/2018 10:36:26: Insert not allowed in table : select c_cod, c_nome, c_data from a_names	
+11/09/2018 11:20:34: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  erro de sintaxe em ou próximo a "where"
+LINE 1: ...me = 'arnaldo',c_data = '20180911',c_cod = '0002',where c_no...
+                                                             ^
+
+Command sent to database : 
+update a_names set c_nome = 'arnaldo',c_data = '20180911',c_cod = '0002',where c_nome = 'lulu'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+UPSQL     Linha : 584
+MAIN     Linha : 279	
+11/09/2018 11:23:22: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  erro de sintaxe em ou próximo a "where"
+LINE 1: ...arnaldo',c_data = '20180911',c_cod = '         3',where c_no...
+                                                             ^
+
+Command sent to database : 
+update a_names set c_nome = 'arnaldo',c_data = '20180911',c_cod = '         3',where c_nome = 'lulu'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+UPSQL     Linha : 585
+MAIN     Linha : 279	
+11/09/2018 11:24:53: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  erro de sintaxe em ou próximo a "where"
+LINE 1: ..._names set c_nome = 'arnaldo',c_data = '20180911',where c_no...
+                                                             ^
+
+Command sent to database : 
+update a_names set c_nome = 'arnaldo',c_data = '20180911',where c_nome = 'lulu'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+UPSQL     Linha : 584
+MAIN     Linha : 279	
+11/09/2018 11:25:31: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  erro de sintaxe em ou próximo a "where"
+LINE 1: ..._names set c_nome = 'arnaldo',c_data = '20180911',where c_no...
+                                                             ^
+
+Command sent to database : 
+update a_names set c_nome = 'arnaldo',c_data = '20180911',where c_nome = 'lulu'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+UPSQL     Linha : 582
+MAIN     Linha : 279	
+11/09/2018 11:29:12: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  erro de sintaxe em ou próximo a "set"
+LINE 1: update a_names set c_nome = 'paulo'set c_data = '20180911'wh...
+                                           ^
+
+Command sent to database : 
+update a_names set c_nome = 'paulo'set c_data = '20180911'where c_nome = 'arnaldo'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+UPSQL     Linha : 583
+MAIN     Linha : 280	
+11/09/2018 11:35:04: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  erro de sintaxe em ou próximo a "c_data"
+LINE 1: update a_names set c_nome = 'dante'c_data = '20180911'where ...
+                                           ^
+
+Command sent to database : 
+update a_names set c_nome = 'dante'c_data = '20180911'where c_nome = 'arnaldo'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+UPSQL     Linha : 584
+MAIN     Linha : 281	
+12/09/2018 08:23:54: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  erro de sintaxe em ou próximo a "where"
+LINE 1: ...me = 'mairo', c_cod =  '003', c_data = '20180912',where c_no...
+                                                             ^
+
+Command sent to database : 
+update a_names set c_nome = 'mairo', c_cod =  '003', c_data = '20180912',where c_nome = 'joao'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+UPSQL     Linha : 587
+MAIN     Linha : 280	
+12/09/2018 08:27:30: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  erro de sintaxe em ou próximo a "where"
+LINE 1: ...me = 'mairo', c_cod =  '003', c_data = '20180912',where c_no...
+                                                             ^
+
+Command sent to database : 
+update a_names set c_nome = 'mairo', c_cod =  '003', c_data = '20180912',where c_nome = 'joao'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+UPSQL     Linha : 587
+MAIN     Linha : 280	
+12/09/2018 08:32:40: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  erro de sintaxe em ou próximo a "c_cod"
+LINE 1: update a_names set c_nome = 'luzia'c_cod = '0003'c_data = '2...
+                                           ^
+
+Command sent to database : 
+update a_names set c_nome = 'luzia'c_cod = '0003'c_data = '20180912'where c_nome = 'joao'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+UPSQL     Linha : 584
+MAIN     Linha : 280	
+12/09/2018 11:16:15: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  relação "a_alunos" não existe
+
+Command sent to database : 
+select * from a_alunos order by c_nome
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+MAIN     Linha : 291	
+13/09/2018 10:10:09: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  valor é muito longo para tipo character(8)
+
+Command sent to database : 
+insert into a_names( c_cod, c_nome, c_data ) values('jenivaldo', '0014', '20180913')
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+ADDINSERT     Linha : 573
+MAIN     Linha : 275	
+14/09/2018 09:20:42: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  constante não-inteira em ORDER BY
+
+Command sent to database : 
+select * from a_names order by c_nome'aaaaa'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+LISTARORD     Linha : 688
+MAIN     Linha : 290	
+14/09/2018 09:21:04: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  constante não-inteira em ORDER BY
+
+Command sent to database : 
+select * from a_names order by'aaaaa'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+LISTARORD     Linha : 688
+MAIN     Linha : 290	
+14/09/2018 09:22:24: SQLExecDirect Error
+(-1) PGRES_FATAL_ERROR - ERRO:  constante não-inteira em ORDER BY
+
+Command sent to database : 
+select * from a_names order by'maria'
+Steatment handle  : 
+Connection handle : 
+RetCode           :         -1
+	SR_PGS:RUNTIMEERR     Linha : 859
+SR_PGS:EXEC     Linha : 367
+LISTARORD     Linha : 687
+MAIN     Linha : 290	
+17/09/2018 09:16:39: Connection Error: 1 (see pgs.ch)	
+17/09/2018 09:16:39: Not connected to the SQL dabase server	
+17/09/2018 09:19:34: Connection Error: 1 (see pgs.ch)	
+17/09/2018 09:19:34: Not connected to the SQL dabase server	
+17/09/2018 09:20:24: Connection Error: 1 (see pgs.ch)	
+09/17/18 09:53:08: Connection Error: 1 (see pgs.ch)	
+24/09/2018 09:17:18: Connection Error: 1 (see pgs.ch)	
+24/09/2018 09:17:18: Not connected to the SQL dabase server	

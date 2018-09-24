@@ -1,0 +1,706 @@
+#line 112 "C:\xHB\include\hbclass.ch"
+   DYNAMIC DivertConstructorCall
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DECLARE HBClass  New( cName AS String, OPTIONAL SuperParams ) AS CLASS HBClass  Create() AS Object  Instance() AS Object  AddClsMethod( cName AS String, @MethodName(), nScope AS Numeric, n2 AS Numeric, n3 AS Numeric )  AddDelegate( cName AS String, cDelegate AS String, cObject AS String, nScope AS Numeric, lPersistent AS LOGICAL )  AddMultiClsData( cType AS String, uVal, nScope AS Numeric, aDatas AS Array OF String )  AddMultiData( cType AS String, uVal, nScope AS Numeric, aDatas AS Array OF String, x AS LOGICAL, lPer AS LOGICAL )  AddMethod( cName AS String, @MethodName(), nScope AS Numeric, lPersistent AS LOGICAL )  AddInLine( cName AS String, bBlock AS CodeBlock, nScope AS Numeric, lPersistent AS LOGICAL )  AddVirtual( cName AS String )  ModMethod( cName AS String, @MethodName(), nScope AS Numeric, lPersistent AS LOGICAL )  ModClsMethod( cName AS String, @MethodName(), nScope AS Numeric )  ModInline( cName AS String, bBlock AS CodeBlock, nScope AS Numeric, lPersistent AS LOGICAL )  SetOnError( @MethodName() )
+#line 11 "new.prg"
+EXTERNAL SQLRDD
+EXTERNAL SR_ODBC
+EXTERNAL SR_PGS
+
+PROCEDURE main()
+    public pega
+    public w_jan
+    public cNcc
+    public oSql
+    public name
+    public cod
+    public Conn
+    public w
+    public x
+    public opcao
+    public files, text
+    public op
+    public cod := 0
+    public Cnome := space( 30 )
+    public cnpj := space( 11 )
+    public idade
+    public prod
+    public prec := 0
+    public cCod
+    public nas :=  CTOD( "00/00/0000" )
+    public ano, nascN
+    public _sqlrdd := "SQLRDD"
+    public server := "127.0.0.1"
+    public user := "postgres"
+    public bank := "toureiro"
+    public password := "hbtdfinfo"
+    public hora := time()
+    Set( 33, "on" )
+    Set( 34, "[]" )
+    __SetCentury( "on" )
+    Set( 4, if(__SetCentury(), "dd/mm/yyyy", "dd/mm/yy") )
+    Set( 28, "on" )
+    Set( 11, "on" )
+    SetColor( '"N/N+/N/BG+"' )
+    dbUseArea( .F.,, "dbnames", "registros", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    dbCreateIndex( "registros", "c_id", {|| c_id}, if( .F., .T., NIL ) )
+    dbCreateIndex( "registros02", "c_id", {|| c_id}, if( .F., .T., NIL ) )
+    dbCreateIndex( "registros03", "c_id", {|| c_id}, if( .F., .T., NIL ) )
+    if !.F. ; ordListClear() ; end ; ordListAdd( "registros" ) ; ordListAdd( "registros02" ) ; ordListAdd( "registros03" )
+    while .T.
+        dbUseArea( .F.,, "dbnames", "registros", if(.F. .OR. .F., !.F., NIL), .F.,, )
+        Scroll() ; SetPos(0,0)
+        DevPos( 01, 07 ) ; DevOut( hora )
+        DispBox( 02, 07, 5, 55, 2 )
+        DevPos( 04, 09 ) ; DevOut( "ESCOLHA: " )
+        DispBox( 05, 07, 21, 55, 2 )
+        DevPos( 04, 44 ) ; DevOut( "ESC = EXIT" )
+        __AtPrompt( 08, 10, "Adicionar registros " , , )
+        __AtPrompt( 10, 10, "Remover registros " , , )
+        __AtPrompt( 12, 10, "Editar registros " , , )
+        __AtPrompt( 14, 10, "Visualizar registros " , , )
+        __AtPrompt( 16, 10, "Gravar registros em .TXT" , , )
+        __AtPrompt( 18, 10, "OOP - com DBF " , , )
+        __AtPrompt( 20, 10, "Conexao com banco SQL " , , )
+        __AtPrompt( 20, 40, "Sair " , , )
+        op := __MenuTo( {|_1| if(PCount() == 0, op, op := _1)}, "op" )
+        Scroll() ; SetPos(0,0)
+        do case
+        case op == 1
+            DbGoBottom()
+            cod := c_id
+            cod++
+            DevPos( 2, 4 ) ; DevOut( "Informe seu nome: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( Cnome, "Cnome",,, ) ) ; ATail(GetList):Display()
+            DevPos( 4, 4 ) ; DevOut( "Informe sua data de nascimento: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( nas, "nas",,, ) ) ; ATail(GetList):Display()
+            ReadModal( GetList, NIL,,,,, ) ; GetList := {} ; ( GetList )
+            DbAppend()
+            grava()
+            Scroll() ; SetPos(0,0)
+        case op == 2
+            if ( !Empty(__Accept("Informe o Numero do ID que deseja: ")) ) ; x := &( __AcceptStr() ) ; end
+            Scroll() ; SetPos(0,0)
+            apaga()
+        case op == 3
+            if ( !Empty(__Accept("Informe o Numero do ID que deseja: ")) ) ; x := &( __AcceptStr() ) ; end
+            Scroll() ; SetPos(0,0)
+            if DbSeek( x )
+                cod := c_id
+                cod := strzero(cod, 5)
+                DevPos( 2, 4 ) ; DevOut( "Informe um novo nome: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( Cnome, "Cnome",,, ) ) ; ATail(GetList):Display()
+                DevPos( 4, 4 ) ; DevOut( "Informe sua data de nascimento nova: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( nas, "nas",,, ) ) ; ATail(GetList):Display()
+                ReadModal( GetList, NIL,,,,, ) ; GetList := {} ; ( GetList )
+                grava()
+                Scroll() ; SetPos(0,0)
+            else
+                __Wait( "ESSE REGISTRO NAO EXISTE !" )
+            endif
+        case op == 4
+            DbGoTop()
+            while ! eof()
+            QOut( c_id, c_nomes, c_idades, c_datanasc )
+            DbSkip()
+            enddo
+            __Wait( " " )
+        case op == 5
+            createdoc()
+        __Wait( "Registros gravados com sucesso" )
+        case op == 6
+            Scroll() ; SetPos(0,0)
+            obj := produto():new()
+            obj_2 := cliente():new()
+            obj_3 := fornecedor():new()
+            while .T.
+                DispBox( 02, 04, 08, 18, 2 )
+                __AtPrompt( 03, 05, "Clientes    " , , )
+                __AtPrompt( 04, 05, "Produtos    " , , )
+                __AtPrompt( 05, 05, "Fornecedor  " , , )
+                __AtPrompt( 06, 05, "CONECTAR SQL" , , )
+                DevPos( 09, 05 ) ; DevOut( "Esc=Sair" )
+                opcao := __MenuTo( {|_1| if(PCount() == 0, opcao, opcao := _1)}, "opcao" )
+                Scroll() ; SetPos(0,0)
+                if Lastkey() == 27
+                    exit
+                endif
+                do case
+                case opcao == 1
+
+                    Scroll() ; SetPos(0,0)
+                    DevPos( 01, 02 ) ; DevOut( "Clientes: " )
+                    DispBox( 02, 04, 08, 20, 2 )
+                    __AtPrompt( 03, 05, " Adicionar " , " Adicionar um cliente " , )
+                    __AtPrompt( 04, 05, " Listar " , " Mostrar todos os clientes listados " , )
+                    __AtPrompt( 05, 05, " Remove " , " Remove um cliente " , )
+                    __AtPrompt( 06, 05, " Atualizar " , " Atualizar um cliente " , )
+                    op := __MenuTo( {|_1| if(PCount() == 0, op, op := _1)}, "op" )
+                    if Lastkey() == 27
+                        exit
+                    endif
+                    Scroll() ; SetPos(0,0)
+                    do case
+                    case op == 1
+                        addcli()
+                        obj_2:adicionar()
+                        Scroll() ; SetPos(0,0)
+                    case op == 2
+                        obj_2:listar()
+                        Scroll() ; SetPos(0,0)
+                    case op == 3
+                        obj_2:excluir()
+                        Scroll() ; SetPos(0,0)
+                    case op == 4
+                        atucli()
+                        obj_2:atualizar()
+                        Scroll() ; SetPos(0,0)
+                    endcase
+                    Scroll() ; SetPos(0,0)
+                case  opcao == 2
+
+                    Scroll() ; SetPos(0,0)
+                    DevPos( 01, 02 ) ; DevOut( "Produtos: " )
+                    DispBox( 02, 04, 08, 20, 2 )
+                    __AtPrompt( 03, 05, " Adicionar " , " Adicionar um produto " , )
+                    __AtPrompt( 04, 05, " Listar " , " listar todos os produtos " , )
+                    __AtPrompt( 05, 05, " Remove " , " Remove um produto " , )
+                    __AtPrompt( 06, 05, " Atualizar " , " Atualizar um produto " , )
+                    op := __MenuTo( {|_1| if(PCount() == 0, op, op := _1)}, "op" )
+                    if Lastkey() == 27
+                        exit
+                    endif
+                    do case
+                    case op == 1
+                        addprod()
+                        obj:adicionar()
+                    case op == 2
+                        obj:listar()
+                    case op == 3
+                        obj:excluir()
+                    case op == 4
+                        uprod()
+                        obj:atualizar()
+                    endcase
+                    Scroll() ; SetPos(0,0)
+                case opcao == 3
+
+                    Scroll() ; SetPos(0,0)
+                    DevPos( 01, 02 ) ; DevOut( "Fornecedor: " )
+                    DispBox( 02, 04, 08, 20, 2 )
+                    __AtPrompt( 03, 05, " Adicionar " , " Adicionar um fornecedor " , )
+                    __AtPrompt( 04, 05, " Listar " , " listar todos os fornecedores " , )
+                    __AtPrompt( 05, 05, " Remove " , " Remove um fornecedor " , )
+                    __AtPrompt( 06, 05, " Atualizar " , " Atualizar um fornecedor " , )
+                    op := __MenuTo( {|_1| if(PCount() == 0, op, op := _1)}, "op" )
+                    if Lastkey() == 27
+                        exit
+                    endif
+                    do case
+                    case op == 1
+                        addfor()
+                        obj_3:adicionar()
+                    case op == 2
+                        obj_3:listar()
+                    case op == 3
+                        obj_3:excluir()
+                    case op == 4
+                        atuafor()
+                        obj_3:atualizar()
+                    otherwise
+                        __Wait( "SEM ESCOLHA !" )
+                        exit
+                    endcase
+                    Scroll() ; SetPos(0,0)
+                case op == 4
+                    Scroll() ; SetPos(0,0)
+                    Conn := "pgs="+server+";uid="+user+";dtb="+bank+";pwd="+password
+                    QOut( cNcc := SR_AddConnection( 4, Conn ) )
+                    if cNcc < 1
+                        DevPos( 02, 04 ) ; DevOut( "erro de conexao" )
+                    endif
+                    sel := "select c_codigo from a_client"
+                    dbUseArea( .T., _sqlrdd, ( sel ), "x_cliente", if(.F. .OR. .F., !.F., NIL), .F.,, )
+                    SR_BeginTransaction()
+                endcase
+            enddo
+    case op == 7
+            dbcloseare()
+            Conn := "pgs="+server+";uid="+user+";dtb="+bank+";pwd="+password
+            cNcc := SR_AddConnection( 4, Conn )
+            sel := "select c_cod, c_nome, c_data from a_names"
+            dbUseArea( .T., _sqlrdd, "a_names", "x_client", if(.F. .OR. .F., !.F., NIL), .F.,, )
+            Scroll() ; SetPos(0,0)
+            if cNcc < 1
+                QOut( "erro de conexao" )
+                exit
+            else
+                alert("conectou-se ao Sql")
+            endif
+            DevPos( 01, 04 ) ; DevOut( "Usando o Banco de clientes" )
+            DispBox( 02, 03, 09, 38, 2 )
+            __AtPrompt( 03, 04, "Adicionar registro: " , , )
+            __AtPrompt( 04, 04, "Deletar registro: " , , )
+            __AtPrompt( 05, 04, "Visualizar os registros: " , , )
+            __AtPrompt( 06, 04, "Atualizar um registro: " , , )
+            __AtPrompt( 07, 04, "Gravar registros em docomuento: " , , )
+            __AtPrompt( 08, 04, "Mostra um so registro: " , , )
+            op := __MenuTo( {|_1| if(PCount() == 0, op, op := _1)}, "op" )
+            if Lastkey() == 27
+                Scroll() ; SetPos(0,0)
+                exit
+            endif
+            do case
+            case op == 1
+                Scroll() ; SetPos(0,0)
+                if ( !Empty(__Accept("Escolha como voce quer adicionar um registro (1)replace ou (2)insert: ")) ) ; q := &( __AcceptStr() ) ; end
+                if q == 1
+                    Scroll() ; SetPos(0,0)
+                    addreplace()
+                else
+                    Scroll() ; SetPos(0,0)
+                    addinsert()
+                endif
+            case op == 2
+                delsql()
+            case op == 3
+                DbGoTop()
+                QOut( "***********************************************************" )
+                QOut( "* C_COD  | C_NOME                 |  C_DATA_DE_REGISTRO   *" )
+                while ! eof()
+                QOut( "*", c_cod, c_nome, c_data,"     *" )
+                DbSkip()
+                enddo
+                __Wait( " " )
+            case op == 4
+                Scroll() ; SetPos(0,0)
+                upsql()
+            case op == 5
+                if FileValid( "docsql.txt" ) == .T.
+                    FileDelete( "docsql.txt" )
+                endif
+                files := Fcreate( "docsql.txt", 0 )
+            while ! eof()
+                Fwrite( files, c_cod  )
+                Fwrite( files, " " )
+                Fwrite( files, c_nome, )
+                Fwrite( files, " ")
+                Fwrite( files, transform( c_data, "@E") + Chr( 13 ) + Chr( 10 ))
+                DbSkip()
+            enddo
+            Scroll() ; SetPos(0,0)
+            __Wait( "Registros gravados com sucesso" )
+            case op == 6
+                Scroll() ; SetPos(0,0)
+                order()
+            endcase
+    otherwise
+        exit
+    endcase
+    enddo
+    dbCloseArea()
+    __Wait( "Clique algo para sair" )
+    Scroll() ; SetPos(0,0)
+Return
+
+
+
+
+
+_HB_CLASS produto ; UTILITY FUNCTION produto(...); static s_oClass ; local oClassInstance ; local nScope ; nScope := 1 ; ( nScope ) ; if s_oClass == NIL ; s_oClass := IIF(.F.,, HBClass():New( "produto" , { HBObject():Classh } ) ) ;
+    _HB_MEMBER { prod} ; IIF( !.F., s_oClass:AddMultiData(,, nScope + IIF( .F., 32, 0 ), { "prod" }, .F., .F. ), )
+    _HB_MEMBER { cod} ; IIF( !.F., s_oClass:AddMultiData(,, nScope + IIF( .F., 32, 0 ), { "cod" }, .F., .F. ), )
+    _HB_MEMBER { preco} ; IIF( !.F., s_oClass:AddMultiData(,, nScope + IIF( .F., 32, 0 ), { "preco" }, .F., .F. ), )
+    _HB_MEMBER adicionar(); IIF( .F., s_oClass:ModMethod( "adicionar", @produto_adicionar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "adicionar", @produto_adicionar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+    _HB_MEMBER listar(); IIF( .F., s_oClass:ModMethod( "listar", @produto_listar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "listar", @produto_listar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+    _HB_MEMBER excluir(); IIF( .F., s_oClass:ModMethod( "excluir", @produto_excluir(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "excluir", @produto_excluir(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+    _HB_MEMBER atualizar(); IIF( .F., s_oClass:ModMethod( "atualizar", @produto_atualizar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "atualizar", @produto_atualizar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+; IF .F. ; __clsActive(s_oClass:hClass) ; s_oClass:Refresh() ; ELSE ; s_oClass:Create() ; END ; oClassInstance := __clsInst( s_oClass:hClass ) ; IF __ObjHasMsg( oClassInstance, "InitClass" ); oClassInstance:InitClass( hb_aParams() ) ; END ; ELSE ; oClassInstance := __clsInst( s_oClass:hClass ) ; END ; IF PCount() > 0 ; DIVERT TO (@DivertConstructorCall()) OF s_oClass ; END ; RETURN oClassInstance AS CLASS produto ;
+
+_HB_CLASS cliente ; UTILITY FUNCTION cliente(...); static s_oClass ; local oClassInstance ; local nScope ; nScope := 1 ; ( nScope ) ; if s_oClass == NIL ; s_oClass := IIF(.F.,, HBClass():New( "cliente" , { HBObject():Classh } ) ) ;
+    _HB_MEMBER { cli} ; IIF( !.F., s_oClass:AddMultiData(,, nScope + IIF( .F., 32, 0 ), { "cli" }, .F., .F. ), )
+    _HB_MEMBER { codi} ; IIF( !.F., s_oClass:AddMultiData(,, nScope + IIF( .F., 32, 0 ), { "codi" }, .F., .F. ), )
+    _HB_MEMBER { idad} ; IIF( !.F., s_oClass:AddMultiData(,, nScope + IIF( .F., 32, 0 ), { "idad" }, .F., .F. ), )
+    _HB_MEMBER { nasc} ; IIF( !.F., s_oClass:AddMultiData(,, nScope + IIF( .F., 32, 0 ), { "nasc" }, .F., .F. ), )
+    _HB_MEMBER adicionar(); IIF( .F., s_oClass:ModMethod( "adicionar", @cliente_adicionar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "adicionar", @cliente_adicionar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+    _HB_MEMBER listar(); IIF( .F., s_oClass:ModMethod( "listar", @cliente_listar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "listar", @cliente_listar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+    _HB_MEMBER excluir(); IIF( .F., s_oClass:ModMethod( "excluir", @cliente_excluir(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "excluir", @cliente_excluir(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+    _HB_MEMBER atualizar(); IIF( .F., s_oClass:ModMethod( "atualizar", @cliente_atualizar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "atualizar", @cliente_atualizar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+; IF .F. ; __clsActive(s_oClass:hClass) ; s_oClass:Refresh() ; ELSE ; s_oClass:Create() ; END ; oClassInstance := __clsInst( s_oClass:hClass ) ; IF __ObjHasMsg( oClassInstance, "InitClass" ); oClassInstance:InitClass( hb_aParams() ) ; END ; ELSE ; oClassInstance := __clsInst( s_oClass:hClass ) ; END ; IF PCount() > 0 ; DIVERT TO (@DivertConstructorCall()) OF s_oClass ; END ; RETURN oClassInstance AS CLASS cliente ;
+
+_HB_CLASS fornecedor ; UTILITY FUNCTION fornecedor(...); static s_oClass ; local oClassInstance ; local nScope ; nScope := 1 ; ( nScope ) ; if s_oClass == NIL ; s_oClass := IIF(.F.,, HBClass():New( "fornecedor" , { HBObject():Classh } ) ) ;
+    _HB_MEMBER { name} ; IIF( !.F., s_oClass:AddMultiData(,, nScope + IIF( .F., 32, 0 ), { "name" }, .F., .F. ), )
+    _HB_MEMBER { Ncnpj} ; IIF( !.F., s_oClass:AddMultiData(,, nScope + IIF( .F., 32, 0 ), { "Ncnpj" }, .F., .F. ), )
+    _HB_MEMBER { key} ; IIF( !.F., s_oClass:AddMultiData(,, nScope + IIF( .F., 32, 0 ), { "key" }, .F., .F. ), )
+    _HB_MEMBER adicionar(); IIF( .F., s_oClass:ModMethod( "adicionar", @fornecedor_adicionar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "adicionar", @fornecedor_adicionar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+    _HB_MEMBER listar(); IIF( .F., s_oClass:ModMethod( "listar", @fornecedor_listar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "listar", @fornecedor_listar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+    _HB_MEMBER excluir(); IIF( .F., s_oClass:ModMethod( "excluir", @fornecedor_excluir(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "excluir", @fornecedor_excluir(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+    _HB_MEMBER atualizar(); IIF( .F., s_oClass:ModMethod( "atualizar", @fornecedor_atualizar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ), s_oClass:AddMethod( "atualizar", @fornecedor_atualizar(), nScope + IIF( .F., 16, 0 ) + IIF( .F., 1024, 0 ), .F. ));
+; IF .F. ; __clsActive(s_oClass:hClass) ; s_oClass:Refresh() ; ELSE ; s_oClass:Create() ; END ; oClassInstance := __clsInst( s_oClass:hClass ) ; IF __ObjHasMsg( oClassInstance, "InitClass" ); oClassInstance:InitClass( hb_aParams() ) ; END ; ELSE ; oClassInstance := __clsInst( s_oClass:hClass ) ; END ; IF PCount() > 0 ; DIVERT TO (@DivertConstructorCall()) OF s_oClass ; END ; RETURN oClassInstance AS CLASS fornecedor ;
+
+
+UTILITY STATIC function produto_adicionar() ; local Self AS CLASS produto := QSelf() AS CLASS produto
+    dbUseArea( .F.,, "dbprodutos", "produtos", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    Scroll() ; SetPos(0,0)
+    DbAppend()
+    _FIELD->produtos->c_id := ::cod
+    _FIELD->produtos->c_nome := ::prod
+    _FIELD->produtos->c_preco := ::preco
+    DbCommit()
+    dbCloseArea()
+Return self
+
+UTILITY STATIC function produto_listar() ; local Self AS CLASS produto := QSelf() AS CLASS produto
+    dbUseArea( .F.,, "dbprodutos", "produtos", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    Scroll() ; SetPos(0,0)
+    browse()
+    __Wait( " " )
+    dbCloseArea()
+Return self
+
+UTILITY STATIC function produto_excluir() ; local Self AS CLASS produto := QSelf() AS CLASS produto
+    dbUseArea( .F.,, "dbprodutos", "produtos", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    dbCreateIndex( "produtos", "c_id", {|| c_id}, if( .F., .T., NIL ) )
+    if !.F. ; ordListClear() ; end ; ordListAdd( "produtos" )
+    apaga()
+    dbCloseArea()
+Return self
+
+UTILITY STATIC function produto_atualizar() ; local Self AS CLASS produto := QSelf() AS CLASS produto
+    dbUseArea( .F.,, "dbprodutos", "produtos", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    _FIELD->produtos->c_id := ::cod
+    _FIELD->produtos->c_nome := ::prod
+    _FIELD->produtos->c_preco := ::preco
+    DbCommit()
+    dbCloseArea()
+Return self
+
+
+UTILITY STATIC function cliente_adicionar() ; local Self AS CLASS cliente := QSelf() AS CLASS cliente
+    _FIELD->registros->c_nomes := ::cli
+    _FIELD->registros->c_datanasc := ::nasc
+    _FIELD->registros->c_idades := ::idad
+    _FIELD->registros->c_id := ::codi
+    DbCommit()
+Return self
+
+UTILITY STATIC function cliente_listar() ; local Self AS CLASS cliente := QSelf() AS CLASS cliente
+    Scroll() ; SetPos(0,0)
+    browse()
+Return self
+
+UTILITY STATIC function cliente_excluir() ; local Self AS CLASS cliente := QSelf() AS CLASS cliente
+    Scroll() ; SetPos(0,0)
+    apaga()
+Return self
+
+UTILITY STATIC function cliente_atualizar() ; local Self AS CLASS cliente := QSelf() AS CLASS cliente
+    _FIELD->registros->c_nomes := ::cli
+    _FIELD->registros->c_datanasc := ::nasc
+    _FIELD->registros->c_idades := ::idad
+    _FIELD->registros->c_id := ::codi
+    DbCommit()
+Return self
+
+
+UTILITY STATIC function fornecedor_adicionar() ; local Self AS CLASS fornecedor := QSelf() AS CLASS fornecedor
+    _FIELD->fornece->c_id := ::key
+    _FIELD->fornece->c_nome := ::name
+    _FIELD->fornece->c_cnpj := ::Ncnpj
+    DbCommit()
+    dbCloseArea()
+Return self
+
+UTILITY STATIC function fornecedor_listar() ; local Self AS CLASS fornecedor := QSelf() AS CLASS fornecedor
+    dbUseArea( .F.,, "dbfornecedor", "fornece", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    Scroll() ; SetPos(0,0)
+    browse()
+    dbCloseArea()
+Return self
+
+UTILITY STATIC function fornecedor_excluir() ; local Self AS CLASS fornecedor := QSelf() AS CLASS fornecedor
+    dbUseArea( .F.,, "dbfornecedor", "fornece", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    apaga()
+    dbCloseArea()
+Return self
+
+UTILITY STATIC function fornecedor_atualizar() ; local Self AS CLASS fornecedor := QSelf() AS CLASS fornecedor
+    dbUseArea( .F.,, "dbfornecedor", "fornece", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    _FIELD->fornece->c_id := ::key
+    _FIELD->fornece->c_nome := ::name
+    _FIELD->fornece->c_cnpj := ::Ncnpj
+    DbCommit()
+    dbCloseArea()
+Return self
+
+
+
+FUNCTION uprod()
+    dbUseArea( .F.,, "dbprodutos",, if(.F. .OR. .F., !.F., NIL), .F.,, )
+    dbCreateIndex( "produtos", "c_id", {|| c_id}, if( .F., .T., NIL ) )
+    if !.F. ; ordListClear() ; end ; ordListAdd( "produtos" )
+    Scroll() ; SetPos(0,0)
+    if ( !Empty(__Accept("Informe o ID do produto que deseja atualizar: ")) ) ; x := &( __AcceptStr() ) ; end
+    if DbSeek( x )
+        cCod := c_id
+        Scroll() ; SetPos(0,0)
+        DevPos( 02, 04 ) ; DevOut( "Informe o novo nome do produto: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( Cnome, "Cnome",,, ) ) ; ATail(GetList):Display()
+        DevPos( 03, 04 ) ; DevOut( "Informe o novo preco do produto: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( prec, "prec",,, ) ) ; ATail(GetList):Display()
+        ReadModal( GetList, NIL,,,,, ) ; GetList := {} ; ( GetList )
+    else
+        __Wait( "Produto nao existe" )
+    endif
+    obj:prod := Cnome
+    obj:preco := prec
+    obj:cod := cCod
+    Scroll() ; SetPos(0,0)
+    dbCloseArea()
+Return nil
+
+
+FUNCTION addprod()
+    dbUseArea( .F.,, "dbprodutos", "produtos", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    Scroll() ; SetPos(0,0)
+    DbGoBottom()
+    DevPos( 02, 04 ) ; DevOut( "Informe o nome do produto: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( Cnome, "Cnome",,, ) ) ; ATail(GetList):Display()
+    DevPos( 04, 04 ) ; DevOut( "Informe o preco do produto: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( prec, "prec",,, ) ) ; ATail(GetList):Display()
+    ReadModal( GetList, NIL,,,,, ) ; GetList := {} ; ( GetList )
+    cCod := c_id
+    cCod++
+    obj:prod := Cnome
+    obj:preco := prec
+    obj:cod := cCod
+    Scroll() ; SetPos(0,0)
+    dbCloseArea()
+Return nil
+
+
+FUNCTION addcli()
+    DbGobottom()
+    cod := c_id
+    cod++
+    DevPos( 2, 4 ) ; DevOut( "Informe seu nome: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( Cnome, "Cnome",,, ) ) ; ATail(GetList):Display()
+    DevPos( 4, 4 ) ; DevOut( "Informe sua data de nascimento: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( nas, "nas",,, ) ) ; ATail(GetList):Display()
+    ReadModal( GetList, NIL,,,,, ) ; GetList := {} ; ( GetList )
+    Scroll() ; SetPos(0,0)
+    ano := Year( Date() )
+    nascN := Year( nas )
+    idade := ( ano - nascN )
+    DbAppend()
+    obj_2:codi := cod
+    obj_2:cli := Cnome
+    obj_2:idad := idade
+    obj_2:nasc := nas
+    Scroll() ; SetPos(0,0)
+Return nil
+
+
+FUNCTION atucli()
+    if ( !Empty(__Accept("Informe o Numero do ID que deseja: ")) ) ; x := &( __AcceptStr() ) ; end
+    Scroll() ; SetPos(0,0)
+    if DbSeek( x )
+        cod := c_id
+        DevPos( 2, 4 ) ; DevOut( "Informe um novo nome: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( Cnome, "Cnome",,, ) ) ; ATail(GetList):Display()
+        DevPos( 4, 4 ) ; DevOut( "Informe sua data de nascimento nova: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( nas, "nas",,, ) ) ; ATail(GetList):Display()
+        ReadModal( GetList, NIL,,,,, ) ; GetList := {} ; ( GetList )
+        ano := Year( Date() )
+        nascN := Year( nas )
+        idade := ( ano - nascN )
+        Scroll() ; SetPos(0,0)
+        DbAppend()
+        obj_2:codi := cod
+        obj_2:cli := Cnome
+        obj_2:nasc := nas
+        obj_2:idad := idade
+    else
+        __Wait( "ESSE REGISTRO NAO EXISTE !" )
+    endif
+Return nil
+
+
+FUNCTION addfor()
+    dbUseArea( .F.,, "dbfornecedor", "fornece", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    Scroll() ; SetPos(0,0)
+    DbGobottom()
+    cod := c_id
+    cod++
+    DevPos( 2, 4 ) ; DevOut( "Informe o nome do fornecedor: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( Cnome, "Cnome",,, ) ) ; ATail(GetList):Display()
+    DevPos( 3, 4 ) ; DevOut( "Informe o CNPJ: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( cnpj, "cnpj",,, ) ) ; ATail(GetList):Display()
+    ReadModal( GetList, NIL,,,,, ) ; GetList := {} ; ( GetList )
+    Scroll() ; SetPos(0,0)
+    obj_3:name := Cnome
+    obj_3:key := cod
+    obj_3:Ncnpj := cnpj
+    dbCloseArea()
+Return nil
+
+
+FUNCTION atuafor()
+    dbUseArea( .F.,, "dbfornecedor", "fornece", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    if ( !Empty(__Accept("Informe o Numero do ID que deseja: ")) ) ; x := &( __AcceptStr() ) ; end
+    Scroll() ; SetPos(0,0)
+    if DbSeek( x )
+        cod := c_id
+        DevPos( 2, 4 ) ; DevOut( " Informe um novo nome do forncedor: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( Cnome, "Cnome",,, ) ) ; ATail(GetList):Display()
+        DevPos( 4, 4 ) ; DevOut( " Informe o novo cnpj: " ) ; SetPos( Row(), Col() + 1 ) ; AAdd( GetList, _GET_( cnpj, "cnpj",,, ) ) ; ATail(GetList):Display()
+        ReadModal( GetList, NIL,,,,, ) ; GetList := {} ; ( GetList )
+        Scroll() ; SetPos(0,0)
+    else
+        __Wait( "ESSE REGISTRO NAO EXISTE !" )
+    endif
+    obj_3:name := Cnome
+    obj_3:key := cod
+    obj_3:Ncnpj := cnpj
+    dbCloseArea()
+Return nil
+
+
+FUNCTION grava()
+    ano := Year( Date() )
+    nascN := Year( nas )
+    idade := ( ano - nascN )
+    _FIELD->registros->c_nomes := Cnome
+    _FIELD->registros->c_datanasc := nas
+    _FIELD->registros->c_idades := idade
+    _FIELD->registros->c_id := cod
+    DbCommit()
+Return nil
+
+
+FUNCTION apaga()
+    Scroll() ; SetPos(0,0)
+    if ( !Empty(__Accept("Informe o Numero do ID que deseja: ")) ) ; x := &( __AcceptStr() ) ; end
+    Scroll() ; SetPos(0,0)
+    if DbSeek( x )
+        dbDelete()
+        __dbPack()
+        DbCommit()
+        __Wait( "Registro apagado com sucesso" )
+    else
+        __Wait( "ESSE REGISTRO NAO EXISTE !" )
+    endif
+Return nil
+
+FUNCTION createdoc()
+    if FileValid( "novo.txt" ) == .T.
+        FileDelete( "novo.txt" )
+    endif
+    files := Fcreate( "novo.txt", 0 )
+    while ! eof()
+        Fwrite( files, str( c_id ) )
+        Fwrite( files, " " )
+        Fwrite( files, c_nomes, )
+        Fwrite( files, " ")
+        Fwrite( files, str( c_idades ) )
+        Fwrite( files, " " )
+        Fwrite( files, transform( c_datanasc, "@E") + Chr( 13 ) + Chr( 10 ))
+        DbSkip()
+    enddo
+    __Wait( "Registros gravados com sucesso" )
+Return nil
+
+
+
+FUNCTION addinsert()
+    DbGoBottom()
+    name := __Accept( "informe um nome: " )
+    cod := c_cod
+    cod := val( cod )
+    cod := cod + 1
+    cod := strzero( cod, 4 )
+    date := date()
+    oSql := SR_GetConnection( 1 )
+    SR_BeginTransaction( cNcc )
+    cSql := "insert into a_names( c_cod, c_nome, c_data ) values" + sqlExp( { cod, name, date } )
+    oSql:Exec( cSql )
+    SR_CommitTransaction()
+Return nil
+
+
+FUNCTION addreplace()
+    DbGoBottom()
+    cod := c_cod
+    cod := val( cod )
+    cod := cod + 1
+    cod := strzero(cod, 4)
+    Scroll() ; SetPos(0,0)
+    name := __Accept( "Informe um nome: " )
+    QOut( oSql := SR_GetConnection( 1 ) )
+    SR_BeginTransaction( cNcc )
+    dbSelectArea( "x_client" )
+    dbAppend()
+    _FIELD->c_cod := cod
+    _FIELD->c_nome := name
+    _FIELD->c_data := date()
+    browse()
+    SR_CommitTransaction()
+Return nil
+
+
+FUNCTION upsql()
+    DbGoBottom()
+    cod := c_cod
+    cod := val( cod )
+    cod := cod + 1
+    cod := strzero( cod, 4 )
+    Scroll() ; SetPos(0,0)
+    date := date()
+    nome := __Accept( "Informe o nome que deseja atualizar: " )
+    name := __Accept( "Informe um novo nome: " )
+    oSql := SR_GetConnection( 1 )
+    SR_BeginTransaction( cNcc )
+    x_client->( dbclosearea() )
+
+
+
+    cSql := "update a_names set c_nome = " + sqlExp( name ) + "," + " c_cod  = " + sqlExp( cod  ) + "," + " c_data = " + sqlExp( date ) + "where c_nome = " + sqlExp( nome )
+    oSql:Exec( cSql )
+    SR_CommitTransaction()
+Return nil
+
+
+FUNCTION delsql()
+    Scroll() ; SetPos(0,0)
+    x_client->( dbclosearea() )
+    oSql := SR_GetConnection( 1 )
+    nome := __Accept( "informe o nome que deseja apagar: " )
+
+    cSql := "delete from a_names where c_nome =" + sqlExp( nome )
+    oSql:Exec( cSql )
+    dbUseArea( .T., _sqlrdd, "a_names", "x_client", if(.F. .OR. .F., !.F., NIL), .F.,, )
+    browse()
+    SR_CommitTransaction()
+Return nil
+
+FUNCTION order()
+    local p
+    x_client->( dbclosearea() )
+    oSql := SR_GetConnection( 1 )
+    Scroll() ; SetPos(0,0)
+    if ( !Empty(__Accept(" Informe o codigo que deseja: ")) ) ; p := &( __AcceptStr() ) ; end
+    p := strzero( p, 4 )
+    cSql := "select * from a_names where c_cod = " + sqlExp( p )
+    dbUseArea( .T., _sqlrdd, ( cSql ), "x_client", if(.T. .OR. .F., !.F., NIL), .F.,, )
+    browse()
+Return nil
+
+FUNCTION sqlExp( xCampo )
+    Local cTexto
+    If ValType( xCampo ) == "A"
+        AEval( xCampo , { |X,I| xCampo[I] := If( ValType(X)=="D" .AND. Empty(X), Nil , X ) } )
+        cTexto := "(" + SR_SqlQuotedString( xCampo , 13 , .T. ) + ")"
+    Else
+       cTexto := SR_SqlQuotedString( xCampo , 13 , .T. )
+    Endif
+Return ( cTexto )

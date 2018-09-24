@@ -1,0 +1,13 @@
+
+Type: C >>>xhb -o"new.c" -m -n -p -q -gc0   -I"/usr/include/xbuilder" "new.prg"<<<
+
+new.prg(672) Error E0021  Incorrect number of arguments: LASTREC 
+Passed: 1, expected: 0
+xHarbour Compiler build 1.2.1 (SimpLex) (Rev. 6620)
+Copyright 1999-2009, http://www.xharbour.org http://www.harbour-project.org/
+1 error
+
+No code generated
+
+Type: C >>>Couldn't build: new.c<<<
+

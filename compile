@@ -1,0 +1,10 @@
+#!/bin/bash
+harbour -n -m -go -DLINUX -DHARBOUR -I/usr/include/xharbour -I. new.prg  2>  error.log
+#harbour -n -m -go -DLINUX -DHARBOUR -I/usr/include/xharbour -I. new.prg  2>> error.log
+
+cp *.o obj 2>> new.log &&
+rm -f *.o  2>> new.log &&
+
+hbmake db.bc 2>>error.log 
+#hbmake db.prg 
+

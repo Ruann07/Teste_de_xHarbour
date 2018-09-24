@@ -1,0 +1,9 @@
+
+Type: C >>>xhb.exe -o"new.c" -m -n -p -q -gc0   -I"C:\xHB\include" -I"C:\xHB\include\w32" "new.prg"<<<
+
+xHarbour 1.2.3 Intl. (SimpLex) (Build 20180529)
+Copyright 1999-2018, http://www.xharbour.org http://www.harbour-project.org/
+Generating object output to 'new.obj'...
+
+Type: C >>>xlink.exe -NOEXPOBJ -MAP -FORCE:MULTIPLE -NOIMPLIB -subsystem:console -LIBPATH:"C:\xHB\lib" -LIBPATH:"C:\xHB\c_lib" -LIBPATH:"C:\xHB\c_lib\win"  "new.obj" "sql.lib" "libpq.lib" "xhb.lib" "dbf.lib" "nsx.lib" "ntx.lib" "cdx.lib" "rmdbfcdx.lib" "ct3comm.lib" crt.lib kernel32.lib user32.lib winspool.lib ole32.lib oleaut32.lib odbc32.lib odbccp32.lib uuid.lib wsock32.lib ws2_32.lib wininet.lib advapi32.lib shlwapi.lib msimg32.lib mpr.lib OleDlg.lib version.lib -out:"new.exe"<<<
+
